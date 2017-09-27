@@ -22,16 +22,6 @@ public class MainActivity extends AppCompatActivity {
                 .phone("123456789")
                 .address("亚特兰蒂斯")
                 .build();
-        new User.UserBuilder("王", "小二")
-                .age(20)
-                .phone("123456789")
-                .address("亚特兰蒂斯")
-                .build();
-        new User.UserBuilder("王", "小二")
-                .age(20)
-                .phone("123456789")
-                .address("亚特兰蒂斯")
-                .build();
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.show();
     }
