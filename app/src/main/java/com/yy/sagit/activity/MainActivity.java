@@ -24,5 +24,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.show();
     }
 }
