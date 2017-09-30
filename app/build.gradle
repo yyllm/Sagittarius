@@ -1,21 +1,57 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.yy.sagit"
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file("Sagittarius.jks")//这里替换成你自己项目生成的keystore的存储路径
+                storePassword "111111"
+                keyAlias "key1"
+                keyPassword "111111"
+                v2SigningEnabled false
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+    }
+// minifyEnabled 混淆处理
+// shrinkResources 去除无用资源
+// signingConfig 签名
+// proguardFiles 混淆配置
+// applicationIdSuffix 增加APP ID的后缀
+// debuggable 是否保留调试信息
     buildTypes {
         release {
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField "String", "SERVER_HOST", "\"110.com/\""
+            signingConfig signingConfigs.release
             minifyEnabled false
+            shrinkResources true
+            zipAlignEnabled true //是否启用zipAlign压缩
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField "String", "SERVER_HOST", "\"110.com/\""
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources true
+            zipAlignEnabled true //是否启用zipAlign压缩
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
     }
 }
 
@@ -24,7 +60,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile project(path: ':loadsir')
