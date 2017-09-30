@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textView=(TextView) this.findViewById(R.id.tv);
-        int x;
-        int y;
         long downtime= SystemClock.uptimeMillis();
 
         MotionEvent down=MotionEvent.obtain(downtime,downtime,MotionEvent.ACTION_DOWN,100,100,0);
