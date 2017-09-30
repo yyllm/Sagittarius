@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView=(TextView) this.findViewById(R.id.tv);
         long downtime= SystemClock.uptimeMillis();
 
+
         MotionEvent down=MotionEvent.obtain(downtime,downtime,MotionEvent.ACTION_DOWN,100,100,0);
         MotionEvent up=MotionEvent.obtain(downtime,SystemClock.uptimeMillis(),MotionEvent.ACTION_UP,100,100,0);
         textView.onTouchEvent(down);
