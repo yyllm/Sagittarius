@@ -37,7 +37,7 @@ android {
             buildConfigField "String", "SERVER_HOST", "\"110.com/\""
             signingConfig signingConfigs.release
             minifyEnabled false
-            shrinkResources true
+            shrinkResources false
             zipAlignEnabled true //是否启用zipAlign压缩
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -47,7 +47,7 @@ android {
             buildConfigField "String", "SERVER_HOST", "\"110.com/\""
             signingConfig signingConfigs.release
             minifyEnabled false
-            shrinkResources true
+            shrinkResources false
             zipAlignEnabled true //是否启用zipAlign压缩
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

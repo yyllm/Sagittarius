@@ -1,7 +1,6 @@
 package com.yy.sagit.activity;
 
 import android.app.AlertDialog;
-import android.content.Intent;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
