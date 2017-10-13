@@ -1,1 +1,1 @@
-include ':app', ':loadsir', ':exloadsir'
+include ':app', ':loadsir', ':exloadsir', ':speechDemo'
