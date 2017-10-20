@@ -7,9 +7,8 @@ package com.yy.sagit.single;
 
 public enum  SingleClass {
     INSTANCE;
-    private String s;
-
     public void doSomeThing(){
 
     }
+    private String s;
 }
