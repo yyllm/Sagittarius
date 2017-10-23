@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.yy.sagit.R;
 import com.yy.sagit.builder.User;
 import com.yy.sagit.single.SingleClass;
+import com.yy.sagit.util.MyLog;
+import com.yy.sagit.util.KeyStoreUtils;
 
 import java.io.DataOutputStream;
 import java.io.OutputStream;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         SingleClass.INSTANCE.doSomeThing();
         textView.callOnClick();
         textView.performClick();
-
+        MyLog.e("aaa", KeyStoreUtils.getKeyStoreValue(this, KeyStoreUtils.EnumValue.MD5));
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
