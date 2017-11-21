@@ -375,7 +375,7 @@ public class IatDemo extends Activity implements OnClickListener {
 					mResultText.setText(contactInfos);
 				}
 			});
-			
+
 			mIat.setParameter(SpeechConstant.ENGINE_TYPE,SpeechConstant.TYPE_CLOUD);
 			mIat.setParameter(SpeechConstant.TEXT_ENCODING, "utf-8");
 			ret = mIat.updateLexicon("contact", contactInfos, mLexiconListener);
