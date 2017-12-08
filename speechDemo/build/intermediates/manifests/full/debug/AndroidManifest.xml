@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.iflytek.voicedemo"
-    android:versionCode="1"
-    android:versionName="2.0.1018.1013" >
+    android:versionCode="2"
+    android:versionName="1.2.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="23" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,6 +22,7 @@
 
     <application
         android:name="com.iflytek.voicedemo.SpeechApp"
+        android:debuggable="true"
         android:icon="@drawable/icon"
         android:label="讯飞语音示例" >
         <activity
