@@ -159,7 +159,6 @@ public class MyLog {
         return stringBuilder;
     }
 
-
     /**
      * json格式化
      *

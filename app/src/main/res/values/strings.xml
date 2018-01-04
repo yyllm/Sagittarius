@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sagittarius</string>
+    <string name="desc">射手座智能安装</string>
+    <string name="install">安装</string>
+    <string name="installing">正在安装...</string>
+    <string name="done">完成</string>
+    <string name="next">下一步</string>
+    <string name="acc_auto_install_service_description">描述</string>
+
 </resources>
