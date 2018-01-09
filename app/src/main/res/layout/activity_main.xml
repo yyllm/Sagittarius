@@ -30,4 +30,26 @@
         android:layout_height="40dp"
         android:text="省心安装"/>
 
+    <com.handmark.pulltorefresh.library.AddBannerPullToRefreshlayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include layout="@layout/refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.handmark.pulltorefresh.library.pullableview.PullableListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            ></com.handmark.pulltorefresh.library.pullableview.PullableListView>
+
+        <include layout="@layout/load_more" />
+
+    </com.handmark.pulltorefresh.library.AddBannerPullToRefreshlayout>
+
+
 </LinearLayout>
