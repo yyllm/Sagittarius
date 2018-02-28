@@ -18,10 +18,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -58,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         long downtime = SystemClock.uptimeMillis();
         findViewById(R.id.bt_begininstall).setOnClickListener(this);
         findViewById(R.id.bt_smartinstall).setOnClickListener(this);
+
+
+
         initHeadView();
 //        new MyAccessibilityService().dispatchGesture(new GestureDescription.Builder().addStroke(new GestureDescription.StrokeDescription()).build(), new AccessibilityService.GestureResultCallback() {
 //            @Override
@@ -104,12 +109,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.show();
 //        execShellCmd("what");
+
+        //listview滑动距离
+        lv.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+                int h = getScrollY(view, firstVisibleItem);//滚动距离
+
+            }
+        });
+    }
+
+    /**
+     * listView 得到滑动距离
+     */
+    private SparseArray recordSp = new SparseArray(0);
+    private int mCurrentfirstVisibleItem = 0;
+    class ItemRecod {
+        int height = 0;
+        int top = 0;
+    }
+    private int getScrollY(AbsListView view, int firstVisibleItem) {
+        mCurrentfirstVisibleItem = firstVisibleItem;
+        View firstView = view.getChildAt(0);
+        if (null != firstView) {
+            ItemRecod itemRecord = (ItemRecod) recordSp.get(firstVisibleItem);
+            if (null == itemRecord) {
+                itemRecord = new ItemRecod();
+            }
+            itemRecord.height = firstView.getHeight();
+            itemRecord.top = firstView.getTop();
+            recordSp.append(firstVisibleItem, itemRecord);
+            int height = 0;
+            for (int i = 0; i < mCurrentfirstVisibleItem; i++) {
+                ItemRecod itemRecod = (ItemRecod) recordSp.get(i);
+                if (itemRecod!=null){
+                    height += itemRecod.height;
+                }
+            }
+            ItemRecod itemRecod = (ItemRecod) recordSp.get(mCurrentfirstVisibleItem);
+            if (null == itemRecod) {
+                itemRecod = new ItemRecod();
+            }
+            return height - itemRecod.top;
+        }
+        return 0;
     }
 
     private void initHeadView() {
         lv = (PullableListView) this.findViewById(R.id.lv);
         View view = LayoutInflater.from(this).inflate(R.layout.head_viewpager, null);
-        ViewPager viewpager = (ViewPager) view.findViewById(R.id.headviewpager);
+
         List<ImageView> listtemp = new ArrayList<ImageView>();
         for (int i = 0; i < 4; i++) {
             ImageView img = new ImageView(this);
@@ -137,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         data.add("Aaaaaaaaaaaaa");
 
         lv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data));
-        viewpager.setAdapter(viewadapter);
+
     }
 
     //智能安装

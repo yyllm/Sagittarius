@@ -4,11 +4,6 @@
     android:layout_height="100dp"
     android:orientation="vertical" >
 
-    <com.yy.sagit.BannerViewPager
-        android:id="@+id/headviewpager"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

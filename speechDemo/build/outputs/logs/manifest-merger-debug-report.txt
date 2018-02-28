@@ -4,7 +4,7 @@ ADDED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\82efafca1ecfd7ff7a02041e74a7abb8\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-v4:23.4.0] D:\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\1ee56e563e28fa9c3a9c88f13aa4bbf3\AndroidManifest.xml:17:1-24:12
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
@@ -24,8 +24,8 @@ INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:2:1-84:12
 		INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml
 application
 ADDED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:7:5-68:19
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\82efafca1ecfd7ff7a02041e74a7abb8\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\82efafca1ecfd7ff7a02041e74a7abb8\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\1ee56e563e28fa9c3a9c88f13aa4bbf3\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\1ee56e563e28fa9c3a9c88f13aa4bbf3\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:10:9-31
 	android:icon
@@ -130,8 +130,8 @@ uses-sdk
 ADDED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:70:5-43
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:70:5-43
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:70:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\82efafca1ecfd7ff7a02041e74a7abb8\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\82efafca1ecfd7ff7a02041e74a7abb8\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\1ee56e563e28fa9c3a9c88f13aa4bbf3\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\1ee56e563e28fa9c3a9c88f13aa4bbf3\AndroidManifest.xml:20:5-43
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:70:5-43
 INJECTED from D:\Sagittarius\speechDemo\src\main\AndroidManifest.xml:70:5-43
 	android:targetSdkVersion

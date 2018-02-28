@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 
 /**
  * Created by Administrator on 2018/1/8.
+ * pulltorefresh 解决下拉刷新和banner的冲突
  */
 
 public class AddBannerPullToRefreshlayout extends PullToRefreshLayout {
